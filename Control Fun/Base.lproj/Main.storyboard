@@ -67,36 +67,80 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PUA-nG-98d">
+                                <rect key="frame" x="90.5" y="377" width="139" height="29"/>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <color key="tintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="R10-BZ-E0g"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSW-M8-eYf">
+                                <rect key="frame" x="247" y="432" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nov-pE-t9Z"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSR-BA-Nhh">
+                                <rect key="frame" x="16" y="432" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kos-Od-OKR"/>
+                                </connections>
+                            </switch>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXH-3c-cBx">
+                                <rect key="frame" x="16" y="432" width="288" height="38"/>
+                                <color key="backgroundColor" red="0.98875492811203003" green="0.81419527530670166" blue="0.11159313470125198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uQ-QJ-VuU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99194246530532837" green="0.79865962266921997" blue="0.003294357331469655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XXH-3c-cBx" secondAttribute="trailing" id="5ue-Kt-EbK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kSW-M8-eYf" secondAttribute="trailing" constant="8" id="9Qb-I1-FUu"/>
                             <constraint firstItem="mbA-EO-VNg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="AEX-c6-B41"/>
                             <constraint firstItem="Ky9-nH-8i6" firstAttribute="centerY" secondItem="VF3-lM-cQi" secondAttribute="centerY" id="CZR-uS-H8l"/>
                             <constraint firstItem="VF3-lM-cQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dwj-dJ-VL3"/>
                             <constraint firstItem="ojQ-SZ-Vco" firstAttribute="top" secondItem="LPB-bN-rC5" secondAttribute="bottom" constant="38" id="H7n-gD-BM5"/>
                             <constraint firstItem="Ac5-k0-p4j" firstAttribute="top" secondItem="LPB-bN-rC5" secondAttribute="top" id="Ifh-Qa-VAd"/>
+                            <constraint firstItem="KSR-BA-Nhh" firstAttribute="top" secondItem="PUA-nG-98d" secondAttribute="bottom" constant="27" id="JXR-cg-VNF"/>
                             <constraint firstItem="Ac5-k0-p4j" firstAttribute="trailing" secondItem="Ky9-nH-8i6" secondAttribute="trailing" id="KTy-a0-PBw"/>
                             <constraint firstItem="60O-ev-mT0" firstAttribute="leading" secondItem="ojQ-SZ-Vco" secondAttribute="trailing" constant="18" id="Kz8-GS-b7N"/>
                             <constraint firstItem="LPB-bN-rC5" firstAttribute="top" secondItem="VF3-lM-cQi" secondAttribute="bottom" constant="21" id="MOP-aB-XNd"/>
                             <constraint firstItem="LPB-bN-rC5" firstAttribute="width" secondItem="VF3-lM-cQi" secondAttribute="width" id="MfX-yh-dht"/>
                             <constraint firstItem="ojQ-SZ-Vco" firstAttribute="centerY" secondItem="60O-ev-mT0" secondAttribute="centerY" id="N97-vP-eIE"/>
+                            <constraint firstItem="kSW-M8-eYf" firstAttribute="top" secondItem="PUA-nG-98d" secondAttribute="bottom" constant="27" id="O7M-BO-TtI"/>
+                            <constraint firstItem="PUA-nG-98d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ofc-PJ-3r5"/>
                             <constraint firstItem="ojQ-SZ-Vco" firstAttribute="leading" secondItem="LPB-bN-rC5" secondAttribute="leading" id="PPo-ax-Dw5"/>
                             <constraint firstItem="Ky9-nH-8i6" firstAttribute="leading" secondItem="Ac5-k0-p4j" secondAttribute="leading" id="PuA-gP-GB7"/>
                             <constraint firstItem="Ky9-nH-8i6" firstAttribute="leading" secondItem="VF3-lM-cQi" secondAttribute="trailing" constant="25" id="RNA-3f-v2y"/>
                             <constraint firstItem="60O-ev-mT0" firstAttribute="trailing" secondItem="Ac5-k0-p4j" secondAttribute="trailing" id="Wni-EC-a1w"/>
                             <constraint firstItem="VF3-lM-cQi" firstAttribute="leading" secondItem="LPB-bN-rC5" secondAttribute="leading" id="emu-8m-8t3"/>
+                            <constraint firstItem="XXH-3c-cBx" firstAttribute="top" secondItem="PUA-nG-98d" secondAttribute="bottom" constant="27" id="iqb-rU-3uh"/>
                             <constraint firstItem="Ky9-nH-8i6" firstAttribute="top" secondItem="mbA-EO-VNg" secondAttribute="bottom" constant="32" id="kRH-GE-sxC"/>
+                            <constraint firstItem="PUA-nG-98d" firstAttribute="top" secondItem="60O-ev-mT0" secondAttribute="bottom" constant="39" id="kpx-iZ-Wmh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KSR-BA-Nhh" secondAttribute="leading" id="l4f-RP-tHh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ky9-nH-8i6" secondAttribute="trailing" constant="8" id="obE-cj-CpO"/>
                             <constraint firstItem="mbA-EO-VNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uMa-Dv-XPa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XXH-3c-cBx" secondAttribute="leading" id="x5W-Hx-KbQ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="DBF-RI-ZYO" appends="YES" id="9b0-ed-rk2"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="XXH-3c-cBx" id="HhB-aM-DeY"/>
+                        <outlet property="leftSwitch" destination="KSR-BA-Nhh" id="GT7-XX-qDz"/>
                         <outlet property="nameField" destination="Ky9-nH-8i6" id="2Fw-BT-SCA"/>
                         <outlet property="numberField" destination="Ac5-k0-p4j" id="RjK-8G-23E"/>
+                        <outlet property="rightSwitch" destination="kSW-M8-eYf" id="dHT-a4-RQT"/>
                         <outlet property="sliderLabel" destination="ojQ-SZ-Vco" id="xlv-B4-n0T"/>
                     </connections>
                 </viewController>
@@ -112,5 +156,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
